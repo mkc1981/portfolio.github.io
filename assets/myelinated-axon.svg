@@ -1,0 +1,190 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 220" role="img" aria-labelledby="ax-title ax-desc">
+    <title id="ax-title">Myelinated axon with nodes of Ranvier</title>
+    <desc id="ax-desc">A textbook-style longitudinal view of a neuron, showing the cell body (soma), the axon hillock, the myelinated axon with alternating Schwann cell wrappings and exposed nodes of Ranvier, and the axon terminal. An action potential propagates from soma to terminal in a saltatory fashion.</desc>
+
+    <defs>
+        <radialGradient id="soma-grad" cx="40%" cy="40%" r="55%">
+            <stop offset="0%" stop-color="#a8d8e8"/>
+            <stop offset="60%" stop-color="#5a8aa8"/>
+            <stop offset="100%" stop-color="#3a5a78"/>
+        </radialGradient>
+
+        <radialGradient id="nucleus-grad" cx="40%" cy="40%" r="55%">
+            <stop offset="0%" stop-color="#5a7898"/>
+            <stop offset="100%" stop-color="#2a3858"/>
+        </radialGradient>
+
+        <linearGradient id="myelin-seg-grad" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#e0d8c0"/>
+            <stop offset="50%" stop-color="#c8b890"/>
+            <stop offset="100%" stop-color="#8a7858"/>
+        </linearGradient>
+
+        <linearGradient id="axon-fiber" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#7eb8da"/>
+            <stop offset="100%" stop-color="#4a7298"/>
+        </linearGradient>
+
+        <filter id="ax-glow" x="-50%" y="-50%" width="200%" height="200%">
+            <feGaussianBlur stdDeviation="2"/>
+        </filter>
+    </defs>
+
+    <!-- Dark microscope background -->
+    <rect width="720" height="220" fill="#0a1224"/>
+
+    <!-- ============================================================
+         SOMA (cell body) with dendrites — left side
+         ============================================================ -->
+    <g id="soma">
+        <!-- Dendrites radiating from the cell body -->
+        <g stroke="#5a8aa8" stroke-width="1.5" fill="none" stroke-linecap="round">
+            <path d="M 60 110 Q 40 80 25 60 Q 15 50 10 40"/>
+            <path d="M 30 65 Q 20 60 12 50"/>
+            <path d="M 65 100 Q 45 70 30 50"/>
+            <path d="M 60 110 Q 35 100 20 95"/>
+            <path d="M 60 110 Q 40 130 20 145 Q 12 152 8 162"/>
+            <path d="M 30 145 Q 18 155 8 158"/>
+            <path d="M 65 120 Q 45 145 30 165"/>
+        </g>
+
+        <!-- Cell body -->
+        <ellipse cx="80" cy="110" rx="22" ry="20" fill="url(#soma-grad)"
+                 stroke="#2a4060" stroke-width="1"/>
+
+        <!-- Nucleus -->
+        <circle cx="76" cy="106" r="9" fill="url(#nucleus-grad)" stroke="#1a2848" stroke-width="0.6"/>
+        <circle cx="74" cy="104" r="3" fill="#80a0c0"/>
+    </g>
+
+    <!-- ============================================================
+         AXON HILLOCK (the trigger zone where the soma narrows
+         into the axon)
+         ============================================================ -->
+    <g id="hillock">
+        <path d="M 100 102 Q 115 108 130 110 L 130 118 Q 115 120 100 124 Z"
+              fill="url(#axon-fiber)" stroke="#2a4060" stroke-width="0.6"/>
+    </g>
+
+    <!-- ============================================================
+         MYELINATED AXON
+         Alternating myelin sheaths (long oval segments) with
+         nodes of Ranvier (gaps) between them
+         ============================================================ -->
+    <g id="myelinated-axon">
+        <!-- Bare axon fiber running underneath -->
+        <line x1="130" y1="114" x2="640" y2="114"
+              stroke="#4a7298" stroke-width="3" stroke-linecap="round"/>
+
+        <!-- Myelin segment 1 -->
+        <ellipse cx="180" cy="114" rx="40" ry="14"
+                 fill="url(#myelin-seg-grad)" stroke="#5a4a30" stroke-width="0.8"/>
+        <!-- Concentric wrapping lines visible in textbook style -->
+        <ellipse cx="180" cy="114" rx="36" ry="11" fill="none" stroke="#9a8a60" stroke-width="0.4"/>
+        <ellipse cx="180" cy="114" rx="32" ry="8" fill="none" stroke="#9a8a60" stroke-width="0.4"/>
+
+        <!-- Myelin segment 2 -->
+        <ellipse cx="280" cy="114" rx="40" ry="14"
+                 fill="url(#myelin-seg-grad)" stroke="#5a4a30" stroke-width="0.8"/>
+        <ellipse cx="280" cy="114" rx="36" ry="11" fill="none" stroke="#9a8a60" stroke-width="0.4"/>
+        <ellipse cx="280" cy="114" rx="32" ry="8" fill="none" stroke="#9a8a60" stroke-width="0.4"/>
+
+        <!-- Myelin segment 3 -->
+        <ellipse cx="380" cy="114" rx="40" ry="14"
+                 fill="url(#myelin-seg-grad)" stroke="#5a4a30" stroke-width="0.8"/>
+        <ellipse cx="380" cy="114" rx="36" ry="11" fill="none" stroke="#9a8a60" stroke-width="0.4"/>
+        <ellipse cx="380" cy="114" rx="32" ry="8" fill="none" stroke="#9a8a60" stroke-width="0.4"/>
+
+        <!-- Myelin segment 4 -->
+        <ellipse cx="480" cy="114" rx="40" ry="14"
+                 fill="url(#myelin-seg-grad)" stroke="#5a4a30" stroke-width="0.8"/>
+        <ellipse cx="480" cy="114" rx="36" ry="11" fill="none" stroke="#9a8a60" stroke-width="0.4"/>
+        <ellipse cx="480" cy="114" rx="32" ry="8" fill="none" stroke="#9a8a60" stroke-width="0.4"/>
+
+        <!-- Myelin segment 5 -->
+        <ellipse cx="580" cy="114" rx="40" ry="14"
+                 fill="url(#myelin-seg-grad)" stroke="#5a4a30" stroke-width="0.8"/>
+        <ellipse cx="580" cy="114" rx="36" ry="11" fill="none" stroke="#9a8a60" stroke-width="0.4"/>
+        <ellipse cx="580" cy="114" rx="32" ry="8" fill="none" stroke="#9a8a60" stroke-width="0.4"/>
+
+        <!-- Schwann cell nuclei (small dark ovals on top of each segment) -->
+        <ellipse cx="180" cy="105" rx="5" ry="3" fill="#5a4828"/>
+        <ellipse cx="280" cy="105" rx="5" ry="3" fill="#5a4828"/>
+        <ellipse cx="380" cy="105" rx="5" ry="3" fill="#5a4828"/>
+        <ellipse cx="480" cy="105" rx="5" ry="3" fill="#5a4828"/>
+        <ellipse cx="580" cy="105" rx="5" ry="3" fill="#5a4828"/>
+    </g>
+
+    <!-- ============================================================
+         ACTION POTENTIAL traveling along the axon (saltatory)
+         ============================================================ -->
+    <g id="action-potential" filter="url(#ax-glow)">
+        <circle cx="230" cy="114" r="5" fill="#ffaa66" opacity="0.95"/>
+        <circle cx="230" cy="114" r="9" fill="rgba(255, 170, 100, 0.4)"/>
+    </g>
+
+    <!-- ============================================================
+         AXON TERMINAL (right end)
+         ============================================================ -->
+    <g id="axon-terminal">
+        <!-- Branching at the end -->
+        <path d="M 640 114 Q 660 108 680 102"
+              stroke="#4a7298" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+        <path d="M 640 114 Q 660 114 680 114"
+              stroke="#4a7298" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+        <path d="M 640 114 Q 660 120 680 126"
+              stroke="#4a7298" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+
+        <!-- Terminal boutons -->
+        <circle cx="685" cy="100" r="6" fill="#d8a838" stroke="#6a4818" stroke-width="0.8"/>
+        <circle cx="690" cy="114" r="6" fill="#d8a838" stroke="#6a4818" stroke-width="0.8"/>
+        <circle cx="685" cy="128" r="6" fill="#d8a838" stroke="#6a4818" stroke-width="0.8"/>
+    </g>
+
+    <!-- ============================================================
+         LABELS
+         ============================================================ -->
+    <g font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif"
+       font-size="10" font-weight="500">
+
+        <!-- Soma -->
+        <line x1="80" y1="90" x2="80" y2="40" stroke="#b8d4f0" stroke-width="0.7"/>
+        <circle cx="80" cy="90" r="1.8" fill="#b8d4f0"/>
+        <text x="80" y="32" text-anchor="middle" fill="#d8e6f5">Soma</text>
+
+        <!-- Axon hillock -->
+        <line x1="115" y1="125" x2="115" y2="180" stroke="#b8d4f0" stroke-width="0.7"/>
+        <circle cx="115" cy="125" r="1.8" fill="#b8d4f0"/>
+        <text x="115" y="195" text-anchor="middle" fill="#d8e6f5">Axon hillock</text>
+
+        <!-- Myelin sheath -->
+        <line x1="280" y1="100" x2="280" y2="40" stroke="#b8d4f0" stroke-width="0.7"/>
+        <circle cx="280" cy="100" r="1.8" fill="#b8d4f0"/>
+        <text x="280" y="32" text-anchor="middle" fill="#d8e6f5">Myelin sheath</text>
+        <text x="280" y="44" text-anchor="middle" fill="#98a8c0" font-size="8.5">(Schwann cell)</text>
+
+        <!-- Node of Ranvier -->
+        <line x1="330" y1="125" x2="330" y2="180" stroke="#b8d4f0" stroke-width="0.7"/>
+        <circle cx="330" cy="125" r="1.8" fill="#b8d4f0"/>
+        <text x="330" y="195" text-anchor="middle" fill="#d8e6f5">Node of Ranvier</text>
+
+        <!-- Action potential -->
+        <line x1="230" y1="125" x2="230" y2="180" stroke="#ff9966" stroke-width="0.7"/>
+        <circle cx="230" cy="125" r="1.8" fill="#ff9966"/>
+        <text x="230" y="195" text-anchor="middle" fill="#ffaa88">Action potential</text>
+
+        <!-- Axon terminal -->
+        <line x1="690" y1="98" x2="690" y2="40" stroke="#b8d4f0" stroke-width="0.7"/>
+        <circle cx="690" cy="98" r="1.8" fill="#b8d4f0"/>
+        <text x="690" y="32" text-anchor="middle" fill="#d8e6f5">Axon terminal</text>
+    </g>
+
+    <!-- Specimen frame brackets -->
+    <g stroke="rgba(140, 200, 255, 0.5)" stroke-width="1" fill="none">
+        <path d="M 8 8 L 8 28 M 8 8 L 28 8"/>
+        <path d="M 712 8 L 712 28 M 712 8 L 692 8"/>
+        <path d="M 8 212 L 8 192 M 8 212 L 28 212"/>
+        <path d="M 712 212 L 712 192 M 712 212 L 692 212"/>
+    </g>
+
+</svg>
